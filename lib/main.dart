@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'dooboolab flutter calendar',
       theme: new ThemeData(
         // This is the theme of your application.
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Calendar Carousel Example'),
+      home: new MyHomePage(title: 'My Calendar '),
     );
   }
 }
@@ -49,10 +50,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  DateTime _currentDate = DateTime(2019, 2, 3);
-  DateTime _currentDate2 = DateTime(2019, 2, 3);
-  String _currentMonth = DateFormat.yMMM().format(DateTime(2019, 2, 3));
-  DateTime _targetDateTime = DateTime(2019, 2, 3);
+  DateTime _currentDate = DateTime(2022, 7, 28);
+  DateTime _currentDate2 = DateTime(2022, 7, 28);
+  String _currentMonth = DateFormat.yMMM().format(DateTime(2022, 7, 28));
+  DateTime _targetDateTime = DateTime(2022, 7, 28);
 //  List<DateTime> _markedDate = [DateTime(2018, 9, 20), DateTime(2018, 10, 11)];
   static Widget _eventIcon = new Container(
     decoration: new BoxDecoration(
@@ -67,9 +68,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   EventList<Event> _markedDateMap = new EventList<Event>(
     events: {
-      new DateTime(2019, 2, 10): [
+      new DateTime(2022, 8, 3): [
         new Event(
-          date: new DateTime(2019, 2, 10),
+          date: new DateTime(2022, 8, 3),
           title: 'Event 1',
           icon: _eventIcon,
           dot: Container(
@@ -80,12 +81,12 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         new Event(
-          date: new DateTime(2019, 2, 10),
+          date: new DateTime(2022, 8, 3),
           title: 'Event 2',
           icon: _eventIcon,
         ),
         new Event(
-          date: new DateTime(2019, 2, 10),
+          date: new DateTime(2022, 8, 3),
           title: 'Event 3',
           icon: _eventIcon,
         ),
@@ -97,34 +98,34 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     /// Add more events to _markedDateMap EventList
     _markedDateMap.add(
-        new DateTime(2019, 2, 25),
+        new DateTime(2022, 8, 15),
         new Event(
-          date: new DateTime(2019, 2, 25),
+          date: new DateTime(2022, 8, 15),
           title: 'Event 5',
           icon: _eventIcon,
         ));
 
     _markedDateMap.add(
-        new DateTime(2019, 2, 10),
+        new DateTime(2022, 8, 3),
         new Event(
-          date: new DateTime(2019, 2, 10),
+          date: new DateTime(2022, 8, 3),
           title: 'Event 4',
           icon: _eventIcon,
         ));
 
-    _markedDateMap.addAll(new DateTime(2019, 2, 11), [
+    _markedDateMap.addAll(new DateTime(2022, 8, 8), [
       new Event(
-        date: new DateTime(2019, 2, 11),
+        date: new DateTime(2022, 8, 8),
         title: 'Event 1',
         icon: _eventIcon,
       ),
       new Event(
-        date: new DateTime(2019, 2, 11),
+        date: new DateTime(2022, 8, 8),
         title: 'Event 2',
         icon: _eventIcon,
       ),
       new Event(
-        date: new DateTime(2019, 2, 11),
+        date: new DateTime(2022, 8, 8),
         title: 'Event 3',
         icon: _eventIcon,
       ),
